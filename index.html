@@ -3,25 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navigation Bar</title>
+    <title>PORTOFOLIO BAYU</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 <body>
-    <div class="Fcontainer">
-        <nav class="wrapper">
-            <div class="brand">
-                <div class="gg"><img src="logo-himatika.png" alt=""></div>
-                <div class="firstname">HIMATIKA</div>
-                <div class="lastname">punk</div>
+     <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid"></i>
+                    <div class="logo-text">MR BAYS</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Resume</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                 <div class="hero-pic">
+                    <img src="foto.jpg" alt="profile pic">
+                 </div>
+                 <div class="hero-text">
+                    <h5>Hi I'm <span class="input">Backend Developer</span></h5>
+                    <h1>Muhamad Bayu Yusuf</h1>
+                    <p> Aku adalah seorang mahasiswa yang kuliah di Universitas Negeri Malang Prodi S1 Matematika
+                    </p>
+
+                    <div class="btn-group">
+                       <a href="#" class="btn active">Download CV</a>
+                       <a href="#" class="btn">Contact</a>
+                    </div>
+
+                    <div class="social">
+                        <a href="https://www.facebook.com/bayu.yusuf.963?locale=id_ID"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/bayu.yusuf_/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://x.com/BayuYus49139762"><i class="fa-brands fa-x"></i></a>
+                        <a href="https://github.com/mrbayss"><i class="fa-brands fa-github"></i></a>
+
+                    </div>
+                 </div>
             </div>
-            <ul class="navigation">
-                <li><a href="" class="home">Home</a></li>
-                <li><a href="" class="about">About Me</a></li>
-                <li><a href="" class="kontak">Kontak</a></li>
-                <li><a href="" class="inbox">Inbox</a></li>
-                <li><img src="logo-himatika.png" alt=""></li>
-            </ul>
-        </nav>
-    </div>
+        </div>
+     </div>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+     <script>
+        /** creating button click show hide navbar **/
+        var togglebtn=document.querySelector(".togglebtn");
+        var nav=document.querySelector(".navlinks");
+        var links=document.querySelector(".navlinks li");
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        })
+
+        var typed=new Typed(".input",{
+            strings:["Backend Developer","Frontend Developer","Web Developer"],
+            typedSpeed:70,
+            backSpeed:55,
+            loop:true
+        })
+     </script>
 </body>
 </html>
